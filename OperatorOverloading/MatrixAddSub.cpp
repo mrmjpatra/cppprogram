@@ -54,6 +54,19 @@ public:
         }
         return C;
     }
+    MatrixAddSub operator-(MatrixAddSub B)
+    {
+        MatrixAddSub C;
+        C.CreateMatrix(row, col);
+        for (int i = 0; i < row; i++)
+        {
+            for (int j = 0; j < col; j++)
+            {
+                C.mat[i][j] = mat[i][j] - B.mat[i][j];
+            }
+        }
+        return C;
+    }
 };
 
 int main()
@@ -69,15 +82,18 @@ int main()
     }
     else
     {
-        MatrixAddSub A,B,C;
+        MatrixAddSub A,B,C,D;
         A.CreateMatrix(r1,c1);
         B.CreateMatrix(r2,c2);
         A.input();
         B.input();
         C=A+B;
+        D=A-B;
         A.print();
         B.print();
         C.print();
+        D.print();
+        
     }
 
     return 0;
