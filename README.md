@@ -1,0 +1,1 @@
+cpp Program . Only open the file which ends with .cpp extension.
