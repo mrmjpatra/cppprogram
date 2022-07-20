@@ -49,12 +49,6 @@ public:
         int rows = row;
         int cols = B.col;
         Multiply C;
-        // C.mat=new int*[rows];
-
-        // for (int i = 0; i < rows; i++)
-        // {
-        //     C.mat[i]=new int[cols];
-        // }
         C.size(rows,cols);
 
         for (int i = 0; i < row; i++)
